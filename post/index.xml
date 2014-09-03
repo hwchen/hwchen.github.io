@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on walther chen </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/post/index.xml/</link>
+    <link>http://waltherchen.com/post/index.xml/</link>
     <language>en-us</language>
     <author>Walther Chen</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title> New Journey</title>
-      <link>http://localhost:1313/post/NewJourney/</link>
+      <link>http://waltherchen.com/post/NewJourney/</link>
       <pubDate>Tue, 02 Sep 2014 14:04:09 EDT</pubDate>
       <author>Walther Chen</author>
-      <guid>http://localhost:1313/post/NewJourney/</guid>
+      <guid>http://waltherchen.com/post/NewJourney/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;m starting a new episode in my life! About one month ago, I committed myself
