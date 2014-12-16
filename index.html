@@ -105,7 +105,7 @@ putStrLn :: String -&gt; IO ()
 
 <p>Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.</p>
 
-<p><code>getDirectoryContents</code> takes a <code>FilePath</code> as an argument, but <code>getCurrentDirectory</code> returns an <code>IO FilePath</code>. They don&rsquo;t match! so what should I do? I just realized now that I could have used <code>&lt;-</code> or <code>&gt;&gt;=</code> to bind the value inside <code>IO FilePath'. But I had learned something fancier last night,</code>liftM`! And I wanted to use it! I knew that I could &ldquo;lift&rdquo; the function into the Monad context, so that it could operate on a value enclosed in a Monad (like IO). So I did, and it worked great, except now there was a nested monad.</p>
+<p><code>getDirectoryContents</code> takes a <code>FilePath</code> as an argument, but <code>getCurrentDirectory</code> returns an <code>IO FilePath</code>. They don&rsquo;t match! so what should I do? I just realized now that I could have used <code>&lt;-</code> or <code>&gt;&gt;=</code> to bind the value inside <code>IO FilePath</code>. But I had learned something fancier last night, <code>liftM</code>! And I wanted to use it! I knew that I could &ldquo;lift&rdquo; the function into the Monad context, so that it could operate on a value enclosed in a Monad (like IO). So I did, and it worked great, except now there was a nested monad.</p>
 
 <pre><code>liftM getDirectoryContents getCurrentDirectory :: IO(IO [FilePath]))
 </code></pre>
