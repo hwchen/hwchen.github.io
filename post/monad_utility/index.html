@@ -129,7 +129,7 @@ putStrLn h --This line doesn't actually work but I'll explain later
 <pre><code>join (liftM getDirectoryContents getCurrentDirectory) :: IO [FilePath]
 </code></pre>
 
-<p>Now I could bind it to a function using the <code>&gt;&gt;=</code> operator. But notice that since the type is <code>IO [FilePath]</code>, I can&rsquo;t just use <code>putStrLn</code>, which takes a <code>String</code> and not a <code>[String]</code>. What I&rsquo;d like to do is map the function <code>putStrLn</code> to each of the values in <code>[FilePath]</code>.</p>
+<p>Now I could bind it to a function using the <code>&gt;&gt;=</code> operator. But notice that since the type of the argument would be <code>IO [FilePath]</code>, I can&rsquo;t just use <code>putStrLn</code>, which takes a <code>String</code> and not a <code>[String]</code>. What I&rsquo;d like to do is map the function <code>putStrLn</code> to each of the values in <code>[FilePath]</code>.</p>
 
 <p>Normal <code>map</code> won&rsquo;t work to print. I guess I&rsquo;m not completely clear why, but I think that using <code>map</code> doesn&rsquo;t actually evaluate the monad (in this case <code>putStrLn</code>). <code>mapM</code> maps and also evaluates and also returns a result. <code>mapM_</code> is more appropriate for this case of just printing, where return value is not needed, since it maps and evaluates but doesn&rsquo;t return.</p>
 
@@ -142,7 +142,7 @@ putStrLn h --This line doesn't actually work but I'll explain later
 
 <p>It&rsquo;s probably more cryptic than, say, a typical Python implementation. But it has its own beauty, that comes from understanding the abstractions and the building blocks that come together to build this piece of code. It fits together kind of like Legos.</p>
 
-<p>I think that after this little excursion, and my attempt to write it up, I&rsquo;ll be able to read a lot more example code! And this was much more fun to me than tring to work through a monster assignment on functors and monads. Start small!</p>
+<p>I think that after this little excursion, and my attempt to write it up, I&rsquo;ll be able to read a lot more example code! And this was much more fun to me than trying to work through a monster assignment on functors and monads. Start small!</p>
 
 <h4 id="toc_5">Last lessons</h4>
 

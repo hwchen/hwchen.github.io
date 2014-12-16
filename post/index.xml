@@ -88,7 +88,7 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 &lt;pre&gt;&lt;code&gt;join (liftM getDirectoryContents getCurrentDirectory) :: IO [FilePath]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now I could bind it to a function using the &lt;code&gt;&amp;gt;&amp;gt;=&lt;/code&gt; operator. But notice that since the type is &lt;code&gt;IO [FilePath]&lt;/code&gt;, I can&amp;rsquo;t just use &lt;code&gt;putStrLn&lt;/code&gt;, which takes a &lt;code&gt;String&lt;/code&gt; and not a &lt;code&gt;[String]&lt;/code&gt;. What I&amp;rsquo;d like to do is map the function &lt;code&gt;putStrLn&lt;/code&gt; to each of the values in &lt;code&gt;[FilePath]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now I could bind it to a function using the &lt;code&gt;&amp;gt;&amp;gt;=&lt;/code&gt; operator. But notice that since the type of the argument would be &lt;code&gt;IO [FilePath]&lt;/code&gt;, I can&amp;rsquo;t just use &lt;code&gt;putStrLn&lt;/code&gt;, which takes a &lt;code&gt;String&lt;/code&gt; and not a &lt;code&gt;[String]&lt;/code&gt;. What I&amp;rsquo;d like to do is map the function &lt;code&gt;putStrLn&lt;/code&gt; to each of the values in &lt;code&gt;[FilePath]&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Normal &lt;code&gt;map&lt;/code&gt; won&amp;rsquo;t work to print. I guess I&amp;rsquo;m not completely clear why, but I think that using &lt;code&gt;map&lt;/code&gt; doesn&amp;rsquo;t actually evaluate the monad (in this case &lt;code&gt;putStrLn&lt;/code&gt;). &lt;code&gt;mapM&lt;/code&gt; maps and also evaluates and also returns a result. &lt;code&gt;mapM_&lt;/code&gt; is more appropriate for this case of just printing, where return value is not needed, since it maps and evaluates but doesn&amp;rsquo;t return.&lt;/p&gt;
 
@@ -101,7 +101,7 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 
 &lt;p&gt;It&amp;rsquo;s probably more cryptic than, say, a typical Python implementation. But it has its own beauty, that comes from understanding the abstractions and the building blocks that come together to build this piece of code. It fits together kind of like Legos.&lt;/p&gt;
 
-&lt;p&gt;I think that after this little excursion, and my attempt to write it up, I&amp;rsquo;ll be able to read a lot more example code! And this was much more fun to me than tring to work through a monster assignment on functors and monads. Start small!&lt;/p&gt;
+&lt;p&gt;I think that after this little excursion, and my attempt to write it up, I&amp;rsquo;ll be able to read a lot more example code! And this was much more fun to me than trying to work through a monster assignment on functors and monads. Start small!&lt;/p&gt;
 
 &lt;h4 id=&#34;toc_5&#34;&gt;Last lessons&lt;/h4&gt;
 
