@@ -58,6 +58,116 @@ rel="stylesheet">
       
   <div class="post">
     <h1 class="post-title">
+      <a href="http://waltherchen.com/post/monad_utility/">
+        Monads, Functors, and the Contents of the Current Directory
+      </a>
+    </h1>
+
+    <span class="post-date">Tue, Dec 16, 2014</span>
+
+    
+
+<p>While trying to get the contents of the current directory in a small Haskell script, I inadvertantly put together some cool connections about Monads and Functors. (disclaimer: this is not a Monad tutorial. Also, beware of ugly code and circuitous reasoning).</p>
+
+<p>The basic idea was to <code>STDOUT</code> the contents of the current directory. Pretty simple? In Haskell pseudocode, I thought:</p>
+
+<pre><code>h &lt;- getDirectoryContents getCurrentDirectory
+putStrLn h
+</code></pre>
+
+<p>Basically, bind the result of the <code>IO</code> operation (get contents of the current directory) to <code>h</code>, and then print <code>h</code>. This did not work on many levels.</p>
+
+<p>Before moving on, I&rsquo;m going to change the syntax to:</p>
+
+<pre><code>getDirectoryContents getCurrentDirectory &gt;&gt;= putStrLn
+</code></pre>
+
+<p>The &gt;&gt;= operator may look a little strange. As I was just learning more about Monads, I was excited to try this syntax, it basically binds the result on the left directly to the right side, so the right side can be applied to it. This means that the intermediate step of binding to <code>h</code> in the above example is skipped.</p>
+
+<h4 id="toc_0">Troubleshooting and Types</h4>
+
+<p>Ok, now that the preliminary is out of the way, why didn&rsquo;t my function work? Let&rsquo;s look at the types.</p>
+
+<pre><code>getDirectoryContents :: FilePath -&gt; IO [FilePath]
+
+getCurrentDirectoy :: IO FilePath
+
+putStrLn :: String -&gt; IO ()
+</code></pre>
+
+<p><code>FilePath</code> is an alias for a <code>String</code>. That&rsquo;s pretty straightforward. But what about IO? For me, it was easiest to think of it as a &ldquo;container&rdquo; or &ldquo;computational context.&rdquo; Because Haskell tries to stay pure, it keeps its Input Output computations in a separate context from &ldquo;pure&rdquo; functions.</p>
+
+<p>This idea of a context for values has really helped me understand some of the abstractions of Haskell. For example, a functor is kind of like a container that has the property that you can transform the value inside without affecting the container. This property is expressed in the fmap function, which applies a function to a value (or values) inside of a &ldquo;box&rdquo;. <code>fmap</code> can transform integers in a list, or a string inside a <code>Maybe</code>, or even a string inside of <code>IO</code>!</p>
+
+<p><code>IO</code> also happens to be a Monad, another abstraction built around the idea of a &ldquo;container.&rdquo; This time the container encapsulates values and sequences of computations (which appears kind of like imperative programming). With my shallow understanding, I hope I&rsquo;m not too wrong. In any case, in order to access a value inside a Monad like <code>IO</code>, you need to &ldquo;reach inside,&rdquo; which is the idea behind <code>h &lt;- getDirectoryContents &quot;/&quot;</code> By binding the value that was in the IO context, you can work on that value with pure functions.</p>
+
+<h4 id="toc_1">Piecing things together</h4>
+
+<p>Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.</p>
+
+<p><code>getDirectoryContents</code> takes a <code>FilePath</code> as an argument, but <code>getCurrentDirectory</code> returns an <code>IO FilePath</code>. They don&rsquo;t match! so what should I do? I just realized now that I could have used <code>&lt;-</code> or <code>&gt;&gt;=</code> to bind the value inside <code>IO FilePath'. But I had learned something fancier last night,</code>liftM`! And I wanted to use it! I knew that I could &ldquo;lift&rdquo; the function into the Monad context, so that it could operate on a value enclosed in a Monad (like IO). So I did, and it worked great, except now there was a nested monad.</p>
+
+<pre><code>liftM getDirectoryContents getCurrentDirectory :: IO(IO [FilePath]))
+</code></pre>
+
+<p>When I tried to bind the above code to any function, it wouldn&rsquo;t work because of the nested IO!</p>
+
+<p>But this ugly version would work (you can see the nesting):</p>
+
+<pre><code>h' &lt;- liftM getDirectoryContents getCurrentDirectory
+h &lt;- h'
+putStrLn h --This line doesn't actually work but I'll explain later
+</code></pre>
+
+<h4 id="toc_2">Diversion into functors (it all comes back)</h4>
+
+<p>So, as part of this long rambling story, I happened to be reading about functors tonight and decided to explore using fmap to do some simple CLI string manipulation, like so:</p>
+
+<pre><code>main = do
+    fmap reverse getLine &gt;&gt;= putStrLn
+</code></pre>
+
+<p>I decided to search and see if I could find an example I remembered of an infinite loop of input and output. Something like <code>interact</code>. But in my search I came across a <a href="http://stackoverflow.com/questions/5216473/why-doesnt-putstrln-getline-work">Stack Overflow</a> question. In the answer, I saw that the reverse bind <code>=&lt;&lt;</code> is equal to <code>fmap</code> followed by <code>join</code>. My reaction was great surprise!</p>
+
+<p>By looking at types, I figured out the <code>fmap</code> part, but still wasn&rsquo;t sure how using <code>join</code> would get the correct type result. So I looked it up on Hoogle, and I found out that <code>join</code> removes a level of monadic structure! And that was exactly what I had been looking for earlier today!</p>
+
+<h4 id="toc_3">Back to the Main Thread</h4>
+
+<p>So, the problem of getting rid of the nesting was solved with join!</p>
+
+<pre><code>join (liftM getDirectoryContents getCurrentDirectory) :: IO [FilePath]
+</code></pre>
+
+<p>Now I could bind it to a function using the <code>&gt;&gt;=</code> operator. But notice that since the type is <code>IO [FilePath]</code>, I can&rsquo;t just use <code>putStrLn</code>, which takes a <code>String</code> and not a <code>[String]</code>. What I&rsquo;d like to do is map the function <code>putStrLn</code> to each of the values in <code>[FilePath]</code>.</p>
+
+<p>Normal <code>map</code> won&rsquo;t work to print. I guess I&rsquo;m not completely clear why, but I think that using <code>map</code> doesn&rsquo;t actually evaluate the monad (in this case <code>putStrLn</code>). <code>mapM</code> maps and also evaluates and also returns a result. <code>mapM_</code> is more appropriate for this case of just printing, where return value is not needed, since it maps and evaluates but doesn&rsquo;t return.</p>
+
+<h4 id="toc_4">Final Code</h4>
+
+<p>So a long-winded and long-winding road to get to the final code:</p>
+
+<pre><code>join (liftM getDirectoryContents getCurrentDirectory) &gt;&gt;= mapM_ putStrLn
+</code></pre>
+
+<p>It&rsquo;s probably more cryptic than, say, a typical Python implementation. But it has its own beauty, that comes from understanding the abstractions and the building blocks that come together to build this piece of code. It fits together kind of like Legos.</p>
+
+<p>I think that after this little excursion, and my attempt to write it up, I&rsquo;ll be able to read a lot more example code! And this was much more fun to me than tring to work through a monster assignment on functors and monads. Start small!</p>
+
+<h4 id="toc_5">Last lessons</h4>
+
+<pre><code>getCurrentDirectory &gt;&gt;= getDirectoryContents &gt;&gt;= mapM_ putStrln
+</code></pre>
+
+<p>Hmmm&hellip; a lot simpler and more elegant, right? Still, I think I learned more by doing it another way first, just because it was what I was thinking at the time. And I had a fun excursion, trying to apply <code>liftM</code>. Now I know <code>liftM</code> and <code>join</code> are together like <code>&gt;==</code>.</p>
+
+<p>Puzzling through like this is fun, but I also see that it required a decent bit of knowledge already. I guess it&rsquo;s just hard (and fun) to be a beginner.</p>
+
+<p>Any mistakes in understanding on my own, feel free to let me know if there&rsquo;s mistakes! This is not meant to be a teaching tool, but rather a place for me to think about how Haskell works! I&rsquo;m practicing my writing skills too, practice makes perfect! (or at least better?)</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="http://waltherchen.com/post/utilities/">
         Utilities
       </a>

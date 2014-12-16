@@ -7,7 +7,114 @@
     <language>en-us</language>
     <author>Walther Chen</author>
     
-    <updated>Mon, 15 Dec 2014 22:32:18 EST</updated>
+    <updated>Tue, 16 Dec 2014 00:44:44 EST</updated>
+    
+    <item>
+      <title>Monads, Functors, and the Contents of the Current Directory</title>
+      <link>http://waltherchen.com/post/monad_utility/</link>
+      <pubDate>Tue, 16 Dec 2014 00:44:44 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://waltherchen.com/post/monad_utility/</guid>
+      <description>
+
+&lt;p&gt;While trying to get the contents of the current directory in a small Haskell script, I inadvertantly put together some cool connections about Monads and Functors. (disclaimer: this is not a Monad tutorial. Also, beware of ugly code and circuitous reasoning).&lt;/p&gt;
+
+&lt;p&gt;The basic idea was to &lt;code&gt;STDOUT&lt;/code&gt; the contents of the current directory. Pretty simple? In Haskell pseudocode, I thought:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;h &amp;lt;- getDirectoryContents getCurrentDirectory
+putStrLn h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Basically, bind the result of the &lt;code&gt;IO&lt;/code&gt; operation (get contents of the current directory) to &lt;code&gt;h&lt;/code&gt;, and then print &lt;code&gt;h&lt;/code&gt;. This did not work on many levels.&lt;/p&gt;
+
+&lt;p&gt;Before moving on, I&amp;rsquo;m going to change the syntax to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;getDirectoryContents getCurrentDirectory &amp;gt;&amp;gt;= putStrLn
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &amp;gt;&amp;gt;= operator may look a little strange. As I was just learning more about Monads, I was excited to try this syntax, it basically binds the result on the left directly to the right side, so the right side can be applied to it. This means that the intermediate step of binding to &lt;code&gt;h&lt;/code&gt; in the above example is skipped.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_0&#34;&gt;Troubleshooting and Types&lt;/h4&gt;
+
+&lt;p&gt;Ok, now that the preliminary is out of the way, why didn&amp;rsquo;t my function work? Let&amp;rsquo;s look at the types.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;getDirectoryContents :: FilePath -&amp;gt; IO [FilePath]
+
+getCurrentDirectoy :: IO FilePath
+
+putStrLn :: String -&amp;gt; IO ()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;FilePath&lt;/code&gt; is an alias for a &lt;code&gt;String&lt;/code&gt;. That&amp;rsquo;s pretty straightforward. But what about IO? For me, it was easiest to think of it as a &amp;ldquo;container&amp;rdquo; or &amp;ldquo;computational context.&amp;rdquo; Because Haskell tries to stay pure, it keeps its Input Output computations in a separate context from &amp;ldquo;pure&amp;rdquo; functions.&lt;/p&gt;
+
+&lt;p&gt;This idea of a context for values has really helped me understand some of the abstractions of Haskell. For example, a functor is kind of like a container that has the property that you can transform the value inside without affecting the container. This property is expressed in the fmap function, which applies a function to a value (or values) inside of a &amp;ldquo;box&amp;rdquo;. &lt;code&gt;fmap&lt;/code&gt; can transform integers in a list, or a string inside a &lt;code&gt;Maybe&lt;/code&gt;, or even a string inside of &lt;code&gt;IO&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;IO&lt;/code&gt; also happens to be a Monad, another abstraction built around the idea of a &amp;ldquo;container.&amp;rdquo; This time the container encapsulates values and sequences of computations (which appears kind of like imperative programming). With my shallow understanding, I hope I&amp;rsquo;m not too wrong. In any case, in order to access a value inside a Monad like &lt;code&gt;IO&lt;/code&gt;, you need to &amp;ldquo;reach inside,&amp;rdquo; which is the idea behind &lt;code&gt;h &amp;lt;- getDirectoryContents &amp;quot;/&amp;quot;&lt;/code&gt; By binding the value that was in the IO context, you can work on that value with pure functions.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_1&#34;&gt;Piecing things together&lt;/h4&gt;
+
+&lt;p&gt;Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;getDirectoryContents&lt;/code&gt; takes a &lt;code&gt;FilePath&lt;/code&gt; as an argument, but &lt;code&gt;getCurrentDirectory&lt;/code&gt; returns an &lt;code&gt;IO FilePath&lt;/code&gt;. They don&amp;rsquo;t match! so what should I do? I just realized now that I could have used &lt;code&gt;&amp;lt;-&lt;/code&gt; or &lt;code&gt;&amp;gt;&amp;gt;=&lt;/code&gt; to bind the value inside &lt;code&gt;IO FilePath&#39;. But I had learned something fancier last night,&lt;/code&gt;liftM`! And I wanted to use it! I knew that I could &amp;ldquo;lift&amp;rdquo; the function into the Monad context, so that it could operate on a value enclosed in a Monad (like IO). So I did, and it worked great, except now there was a nested monad.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;liftM getDirectoryContents getCurrentDirectory :: IO(IO [FilePath]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When I tried to bind the above code to any function, it wouldn&amp;rsquo;t work because of the nested IO!&lt;/p&gt;
+
+&lt;p&gt;But this ugly version would work (you can see the nesting):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;h&#39; &amp;lt;- liftM getDirectoryContents getCurrentDirectory
+h &amp;lt;- h&#39;
+putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;toc_2&#34;&gt;Diversion into functors (it all comes back)&lt;/h4&gt;
+
+&lt;p&gt;So, as part of this long rambling story, I happened to be reading about functors tonight and decided to explore using fmap to do some simple CLI string manipulation, like so:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;main = do
+    fmap reverse getLine &amp;gt;&amp;gt;= putStrLn
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I decided to search and see if I could find an example I remembered of an infinite loop of input and output. Something like &lt;code&gt;interact&lt;/code&gt;. But in my search I came across a &lt;a href=&#34;http://stackoverflow.com/questions/5216473/why-doesnt-putstrln-getline-work&#34;&gt;Stack Overflow&lt;/a&gt; question. In the answer, I saw that the reverse bind &lt;code&gt;=&amp;lt;&amp;lt;&lt;/code&gt; is equal to &lt;code&gt;fmap&lt;/code&gt; followed by &lt;code&gt;join&lt;/code&gt;. My reaction was great surprise!&lt;/p&gt;
+
+&lt;p&gt;By looking at types, I figured out the &lt;code&gt;fmap&lt;/code&gt; part, but still wasn&amp;rsquo;t sure how using &lt;code&gt;join&lt;/code&gt; would get the correct type result. So I looked it up on Hoogle, and I found out that &lt;code&gt;join&lt;/code&gt; removes a level of monadic structure! And that was exactly what I had been looking for earlier today!&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_3&#34;&gt;Back to the Main Thread&lt;/h4&gt;
+
+&lt;p&gt;So, the problem of getting rid of the nesting was solved with join!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;join (liftM getDirectoryContents getCurrentDirectory) :: IO [FilePath]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I could bind it to a function using the &lt;code&gt;&amp;gt;&amp;gt;=&lt;/code&gt; operator. But notice that since the type is &lt;code&gt;IO [FilePath]&lt;/code&gt;, I can&amp;rsquo;t just use &lt;code&gt;putStrLn&lt;/code&gt;, which takes a &lt;code&gt;String&lt;/code&gt; and not a &lt;code&gt;[String]&lt;/code&gt;. What I&amp;rsquo;d like to do is map the function &lt;code&gt;putStrLn&lt;/code&gt; to each of the values in &lt;code&gt;[FilePath]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Normal &lt;code&gt;map&lt;/code&gt; won&amp;rsquo;t work to print. I guess I&amp;rsquo;m not completely clear why, but I think that using &lt;code&gt;map&lt;/code&gt; doesn&amp;rsquo;t actually evaluate the monad (in this case &lt;code&gt;putStrLn&lt;/code&gt;). &lt;code&gt;mapM&lt;/code&gt; maps and also evaluates and also returns a result. &lt;code&gt;mapM_&lt;/code&gt; is more appropriate for this case of just printing, where return value is not needed, since it maps and evaluates but doesn&amp;rsquo;t return.&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_4&#34;&gt;Final Code&lt;/h4&gt;
+
+&lt;p&gt;So a long-winded and long-winding road to get to the final code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;join (liftM getDirectoryContents getCurrentDirectory) &amp;gt;&amp;gt;= mapM_ putStrLn
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s probably more cryptic than, say, a typical Python implementation. But it has its own beauty, that comes from understanding the abstractions and the building blocks that come together to build this piece of code. It fits together kind of like Legos.&lt;/p&gt;
+
+&lt;p&gt;I think that after this little excursion, and my attempt to write it up, I&amp;rsquo;ll be able to read a lot more example code! And this was much more fun to me than tring to work through a monster assignment on functors and monads. Start small!&lt;/p&gt;
+
+&lt;h4 id=&#34;toc_5&#34;&gt;Last lessons&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;getCurrentDirectory &amp;gt;&amp;gt;= getDirectoryContents &amp;gt;&amp;gt;= mapM_ putStrln
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hmmm&amp;hellip; a lot simpler and more elegant, right? Still, I think I learned more by doing it another way first, just because it was what I was thinking at the time. And I had a fun excursion, trying to apply &lt;code&gt;liftM&lt;/code&gt;. Now I know &lt;code&gt;liftM&lt;/code&gt; and &lt;code&gt;join&lt;/code&gt; are together like &lt;code&gt;&amp;gt;==&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Puzzling through like this is fun, but I also see that it required a decent bit of knowledge already. I guess it&amp;rsquo;s just hard (and fun) to be a beginner.&lt;/p&gt;
+
+&lt;p&gt;Any mistakes in understanding on my own, feel free to let me know if there&amp;rsquo;s mistakes! This is not meant to be a teaching tool, but rather a place for me to think about how Haskell works! I&amp;rsquo;m practicing my writing skills too, practice makes perfect! (or at least better?)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Utilities</title>
