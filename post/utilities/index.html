@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Utilities &middot; walther chen </title>
+
+  
+  <link rel="stylesheet" href="http://waltherchen.com/css/poole.css">
+  <link rel="stylesheet" href="http://waltherchen.com/css/syntax.css">
+  <link rel="stylesheet" href="http://waltherchen.com/css/hyde.css">
+  <link rel="stylesheet"
+  href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Libre+Baskerville">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+rel="stylesheet">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="walther chen" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="/">walther chen</a></h1>
+      <p class="lead">
+       code, Go, yoga 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/post">Posts</a> </li>
+      
+        <li><a href="http://waltherchen.com/about/"> About </a></li>
+      
+    </ul>
+
+    <a href="http://www.linkedin.com/pub/walther-chen/12/7a5/5b8"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;
+    <a href="https://github.com/hwchen"><i class="fa fa-github-square"></i></a>&nbsp;&nbsp;
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a><br/>
+    &copy; 2014 Walther Chen </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Utilities</h1>
+  <span class="post-date">Mon, Dec 15, 2014</span>
+      <p>Exciting! I wrote my first program that&rsquo;s for &ldquo;real&rdquo; work! It&rsquo;s a small script to upload files to an ftp server that hosts the MGA ladder.</p>
+
+<p>It&rsquo;s kind of funny, it seems like such a simple program when I look at it now. But maybe one month ago, it might have felt very complicated in Haskell. I think that&rsquo;s because it helped this time around to know more about monads and &gt;== and liftM. The steps of the script are not hard, nor was calling the libraries (for ftp, directories, etc.). But understanding what Haskell was actually doing (I think that this would be called semantics?) finally happened.</p>
+
+<p>So, a cool little program that saved me the huge annoyance of using a GUI ftp client, while also giving me some fun hands-on coding and digging in libraries, combined with furthering my understanding of Haskell abstractions like monads.</p>
+
+<p>In addition, I also just realized that I can easily extend this utility for helping me convert file formats. I currently write in Markdown and convert to html using pandoc (which is written in Haskell!). I had thought that it was a pity that I couldn&rsquo;t call the pandoc executable from inside the script, like I might have done with a bash script&hellip;. But I can integrate the pandoc library into my library! Even more saved keystrokes coming my way! I may even be able to use this script to apply html headers/templates so that it will be easier to add css and javascript to the basic site.</p>
+
+<p>Of course, eventually the full site will be database driven (Flask, or maybe even Scotty if there&rsquo;s enough documentation). But for now, it&rsquo;s fun working on this utility. Following close behind is another CLI utility to generate AGA ratings submission forms.</p>
+
+</div>
+</div>
+
+  </body>
+</html>
