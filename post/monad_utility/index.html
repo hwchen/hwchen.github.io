@@ -92,6 +92,8 @@ putStrLn :: String -&gt; IO ()
 
 <p><code>IO</code> also happens to be a Monad, another abstraction built around the idea of a &ldquo;container.&rdquo; This time the container encapsulates values and sequences of computations (which appears kind of like imperative programming). With my shallow understanding, I hope I&rsquo;m not too wrong. In any case, in order to access a value inside a Monad like <code>IO</code>, you need to &ldquo;reach inside,&rdquo; which is the idea behind <code>h &lt;- getDirectoryContents &quot;/&quot;</code> By binding the value that was in the IO context, you can work on that value with pure functions.</p>
 
+<p>(Edit <sup>12</sup>&frasl;<sub>16</sub>/2014: bind is <code>(&gt;&gt;=) :: Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b</code>, so the function it takes should take a value but return a Monad (or IO) value. I&rsquo;ve seen <code>&lt;-</code> described as &ldquo;slurping&rdquo; or &ldquo;draw from&rdquo;)</p>
+
 <h4 id="toc_1">Piecing things together</h4>
 
 <p>Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.</p>

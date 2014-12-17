@@ -51,6 +51,8 @@ putStrLn :: String -&amp;gt; IO ()
 
 &lt;p&gt;&lt;code&gt;IO&lt;/code&gt; also happens to be a Monad, another abstraction built around the idea of a &amp;ldquo;container.&amp;rdquo; This time the container encapsulates values and sequences of computations (which appears kind of like imperative programming). With my shallow understanding, I hope I&amp;rsquo;m not too wrong. In any case, in order to access a value inside a Monad like &lt;code&gt;IO&lt;/code&gt;, you need to &amp;ldquo;reach inside,&amp;rdquo; which is the idea behind &lt;code&gt;h &amp;lt;- getDirectoryContents &amp;quot;/&amp;quot;&lt;/code&gt; By binding the value that was in the IO context, you can work on that value with pure functions.&lt;/p&gt;
 
+&lt;p&gt;(Edit &lt;sup&gt;12&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;/2014: bind is &lt;code&gt;(&amp;gt;&amp;gt;=) :: Monad m =&amp;gt; m a -&amp;gt; (a -&amp;gt; m b) -&amp;gt; m b&lt;/code&gt;, so the function it takes should take a value but return a Monad (or IO) value. I&amp;rsquo;ve seen &lt;code&gt;&amp;lt;-&lt;/code&gt; described as &amp;ldquo;slurping&amp;rdquo; or &amp;ldquo;draw from&amp;rdquo;)&lt;/p&gt;
+
 &lt;h4 id=&#34;toc_1&#34;&gt;Piecing things together&lt;/h4&gt;
 
 &lt;p&gt;Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.&lt;/p&gt;
