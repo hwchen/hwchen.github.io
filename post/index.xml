@@ -7,7 +7,23 @@
     <language>en-us</language>
     <author>Walther Chen</author>
     
-    <updated>Tue, 16 Dec 2014 00:44:44 EST</updated>
+    <updated>Thu, 25 Dec 2014 18:51:17 EST</updated>
+    
+    <item>
+      <title>Turning a corner</title>
+      <link>http://waltherchen.com/post/turning_corner/</link>
+      <pubDate>Thu, 25 Dec 2014 18:51:17 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://waltherchen.com/post/turning_corner/</guid>
+      <description>&lt;p&gt;Feels like I&amp;rsquo;m turning a corner! I think that I&amp;rsquo;m starting to feel the possibility of putting projects together now.&lt;/p&gt;
+
+&lt;p&gt;I think a large part of this is simply volume of code. I finished 50 problems on Project Euler (Yay!), which involved a lot of good repetition. I especially became comfortable with the use of higher-order functions. And from the repetition, I&amp;rsquo;m beginning to see how I would want to organize bigger programs. As usual, not something that I can really understand by reading a book, but it grows organically out of the process of learning. I&amp;rsquo;m beginning to see my own preferences for how to break up functions, when to use algebraic data types.&lt;/p&gt;
+
+&lt;p&gt;The other part was finally getting motivated to do some real-world programming for the MGA ladder. I wrote a small program for computing ladder standings, and for updating files to the ftp server. I mucked around in the plumbing of doing IO and ftp stuff, and found that it wasn&amp;rsquo;t really that hard. Then, today I re-found some old tutorials on building an &lt;a href=&#34;https://www.haskell.org/haskellwiki/Roll_your_own_IRC_bot&#34;&gt;IRC bot&lt;/a&gt; and an interpreter (&lt;a href=&#34;http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours&#34;&gt;Write Yourself A Scheme&lt;/a&gt;). Suddenly, not so imposing! Two months ago they would have seemed really imposing!&lt;/p&gt;
+
+&lt;p&gt;Of course, this doesn&amp;rsquo;t mean that I&amp;rsquo;m comfortable with things like functors and applicatives yet. I understand them theoretically, but I see now that I will need to apply them in practial contexts to really get it. So, I just need to code more! Judging from how I feel after Project Euler, I don&amp;rsquo;t need to code much bigger projects. In fact, that might be counter-productive. Instead, lots of smaller projects that feel good to finish, and now more variety might be nice.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Monads, Functors, and the Contents of the Current Directory</title>
