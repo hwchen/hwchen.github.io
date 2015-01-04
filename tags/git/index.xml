@@ -32,6 +32,8 @@
 &lt;li&gt;After review and merge, then merge changes back to origin and local masters (in whatever preferred order).&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;We also covered some tools that would be helpful for using Git, like some options for Git log that would enable visualization of branches. I&amp;rsquo;m also planning on installing the Hub tool.&lt;/p&gt;
+
 &lt;p&gt;So, a lot for my brain to take in today. Git is very powerful and flexible, and lots of thanks to Andrew for his help. I don&amp;rsquo;t think I could have figured this out in even a day on my own, and we spent just one hour.&lt;/p&gt;
 
 &lt;p&gt;I can see why Git experience in particular is a highly requested skill for software developers. It&amp;rsquo;s not just a &amp;ldquo;version control&amp;rdquo; (in perhaps the back-up sense), it&amp;rsquo;s a very powerful coordination software that makes very large engineering projects possible.&lt;/p&gt;
