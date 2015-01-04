@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Github on walther chen </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://waltherchen.com/tags/github/index.xml/</link>
+    <language>en-us</language>
+    <author>Walther Chen</author>
+    
+    <updated>Sun, 04 Jan 2015 18:31:24 EST</updated>
+    
+    <item>
+      <title>Github and Ladder</title>
+      <link>http://waltherchen.com/post/github_ladder/</link>
+      <pubDate>Sun, 04 Jan 2015 18:31:24 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://waltherchen.com/post/github_ladder/</guid>
+      <description>&lt;p&gt;Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.&lt;/p&gt;
+
+&lt;p&gt;For the MGA ladder, we&amp;rsquo;re going to set up some software to help manage recording and displaying of results. Hopefully, we&amp;rsquo;ll also get automatic submission of rated games to the AGA.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve already written some &lt;a href=&#34;https://github.com/hwchen/ladder-hs&#34;&gt;utilities&lt;/a&gt; in Haskell to automate updating of the ladder site, using a markdown -&amp;gt; pandoc -&amp;gt;html -&amp;gt; upload to site. So what used to take me 5 minutes now only takes me less than a minute! Maybe not that much absolute time saved, in the grand scheme of things, but I savor every keystroke I save (and especially point and clicks).&lt;/p&gt;
+
+&lt;p&gt;The software that Andrew and I are starting will eventually be much more ambitious. Instead of working just on flat files as a data store, and manually running a program to convert results to a website, we&amp;rsquo;ll be using flask to set up a web framework with a database.&lt;/p&gt;
+
+&lt;p&gt;Today&amp;rsquo;s first major step was to get a workflow so that we could cooperate on the project. Github is one of the go-tos for collaboration, but it&amp;rsquo;s pretty complicated for a novice. Fortunately, Andrew has a lot of experience with Git for his sofware engineering work. I learned about forking, the difference between upstream and origin (and master), and how to use branches. We stepped through our planned workflow:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Create local branch&lt;/li&gt;
+&lt;li&gt;Commit and push local branch to origin branch&lt;/li&gt;
+&lt;li&gt;Pull request from origin branch to upstream master (currently massgo/mgaladder)&lt;/li&gt;
+&lt;li&gt;After review and merge, then merge changes back to origin and local masters (in whatever preferred order).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So, a lot for my brain to take in today. Git is very powerful and flexible, and lots of thanks to Andrew for his help. I don&amp;rsquo;t think I could have figured this out in even a day on my own, and we spent just one hour.&lt;/p&gt;
+
+&lt;p&gt;I can see why Git experience in particular is a highly requested skill for software developers. It&amp;rsquo;s not just a &amp;ldquo;version control&amp;rdquo; (in perhaps the back-up sense), it&amp;rsquo;s a very powerful coordination software that makes very large engineering projects possible.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

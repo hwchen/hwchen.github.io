@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Github and Ladder &middot; walther chen </title>
+
+  
+  <link rel="stylesheet" href="http://waltherchen.com/css/poole.css">
+  <link rel="stylesheet" href="http://waltherchen.com/css/syntax.css">
+  <link rel="stylesheet" href="http://waltherchen.com/css/hyde.css">
+  <link rel="stylesheet"
+  href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Libre+Baskerville">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+rel="stylesheet">
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="walther chen" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1><a href="/">walther chen</a></h1>
+      <p class="lead">
+       code, Go, yoga 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/post">Posts</a> </li>
+      
+        <li><a href="http://waltherchen.com/about/"> About </a></li>
+      
+    </ul>
+
+    <a href="http://www.linkedin.com/pub/walther-chen/12/7a5/5b8"><i class="fa fa-linkedin-square"></i></a>&nbsp;&nbsp;
+    <a href="https://github.com/hwchen"><i class="fa fa-github-square"></i></a>&nbsp;&nbsp;
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a><br/>
+    &copy; 2015 Walther Chen </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+  <h1>Github and Ladder</h1>
+  <span class="post-date">Sun, Jan 4, 2015</span>
+      <p>Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.</p>
+
+<p>For the MGA ladder, we&rsquo;re going to set up some software to help manage recording and displaying of results. Hopefully, we&rsquo;ll also get automatic submission of rated games to the AGA.</p>
+
+<p>I&rsquo;ve already written some <a href="https://github.com/hwchen/ladder-hs">utilities</a> in Haskell to automate updating of the ladder site, using a markdown -&gt; pandoc -&gt;html -&gt; upload to site. So what used to take me 5 minutes now only takes me less than a minute! Maybe not that much absolute time saved, in the grand scheme of things, but I savor every keystroke I save (and especially point and clicks).</p>
+
+<p>The software that Andrew and I are starting will eventually be much more ambitious. Instead of working just on flat files as a data store, and manually running a program to convert results to a website, we&rsquo;ll be using flask to set up a web framework with a database.</p>
+
+<p>Today&rsquo;s first major step was to get a workflow so that we could cooperate on the project. Github is one of the go-tos for collaboration, but it&rsquo;s pretty complicated for a novice. Fortunately, Andrew has a lot of experience with Git for his sofware engineering work. I learned about forking, the difference between upstream and origin (and master), and how to use branches. We stepped through our planned workflow:</p>
+
+<ol>
+<li>Create local branch</li>
+<li>Commit and push local branch to origin branch</li>
+<li>Pull request from origin branch to upstream master (currently massgo/mgaladder)</li>
+<li>After review and merge, then merge changes back to origin and local masters (in whatever preferred order).</li>
+</ol>
+
+<p>So, a lot for my brain to take in today. Git is very powerful and flexible, and lots of thanks to Andrew for his help. I don&rsquo;t think I could have figured this out in even a day on my own, and we spent just one hour.</p>
+
+<p>I can see why Git experience in particular is a highly requested skill for software developers. It&rsquo;s not just a &ldquo;version control&rdquo; (in perhaps the back-up sense), it&rsquo;s a very powerful coordination software that makes very large engineering projects possible.</p>
+
+</div>
+</div>
+
+  </body>
+</html>
