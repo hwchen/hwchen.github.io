@@ -10,16 +10,16 @@
   <title> Monads, Functors, and the Contents of the Current Directory &middot; walther chen </title>
 
   
-  <link rel="stylesheet" href="http://waltherchen.com/css/poole.css">
-  <link rel="stylesheet" href="http://waltherchen.com/css/syntax.css">
-  <link rel="stylesheet" href="http://waltherchen.com/css/hyde.css">
+  <link rel="stylesheet" href="http://waltherchen.com//css/poole.css">
+  <link rel="stylesheet" href="http://waltherchen.com//css/syntax.css">
+  <link rel="stylesheet" href="http://waltherchen.com//css/hyde.css">
   <link rel="stylesheet"
   href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Libre+Baskerville">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
 rel="stylesheet">
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://waltherchen.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://waltherchen.com/favicon.ico">
 
   
   <link href="" rel="alternate" type="application/rss+xml" title="walther chen" />
@@ -30,16 +30,16 @@ rel="stylesheet">
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1><a href="/">walther chen</a></h1>
+      <h1><a href="http://waltherchen.com/">walther chen</a></h1>
       <p class="lead">
        code, Go, yoga 
       </p>
     </div>
 
     <ul class="sidebar-nav">
-      <li><a href="/post">Posts</a> </li>
+      <li><a href="http://waltherchen.com/post">Posts</a> </li>
       
-        <li><a href="http://waltherchen.com/about/"> About </a></li>
+        <li><a href="http://waltherchen.com/about"> About </a></li>
       
     </ul>
 
@@ -75,7 +75,7 @@ putStrLn h
 
 <p>The &gt;&gt;= operator may look a little strange. As I was just learning more about Monads, I was excited to try this syntax, it basically binds the result on the left directly to the right side, so the right side can be applied to it. This means that the intermediate step of binding to <code>h</code> in the above example is skipped.</p>
 
-<h4 id="toc_0">Troubleshooting and Types</h4>
+<h4 id="troubleshooting-and-types:f11822f10c61c2e55403485b223b3ea7">Troubleshooting and Types</h4>
 
 <p>Ok, now that the preliminary is out of the way, why didn&rsquo;t my function work? Let&rsquo;s look at the types.</p>
 
@@ -94,7 +94,7 @@ putStrLn :: String -&gt; IO ()
 
 <p>(Edit <sup>12</sup>&frasl;<sub>16</sub>/2014: bind is <code>(&gt;&gt;=) :: Monad m =&gt; m a -&gt; (a -&gt; m b) -&gt; m b</code>, so the function it takes should take a value but return a Monad (or IO) value. I&rsquo;ve seen <code>&lt;-</code> described as &ldquo;slurping&rdquo; or &ldquo;draw from&rdquo;)</p>
 
-<h4 id="toc_1">Piecing things together</h4>
+<h4 id="piecing-things-together:f11822f10c61c2e55403485b223b3ea7">Piecing things together</h4>
 
 <p>Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.</p>
 
@@ -112,7 +112,7 @@ h &lt;- h'
 putStrLn h --This line doesn't actually work but I'll explain later
 </code></pre>
 
-<h4 id="toc_2">Diversion into functors (it all comes back)</h4>
+<h4 id="diversion-into-functors-it-all-comes-back:f11822f10c61c2e55403485b223b3ea7">Diversion into functors (it all comes back)</h4>
 
 <p>So, as part of this long rambling story, I happened to be reading about functors tonight and decided to explore using fmap to do some simple CLI string manipulation, like so:</p>
 
@@ -124,7 +124,7 @@ putStrLn h --This line doesn't actually work but I'll explain later
 
 <p>By looking at types, I figured out the <code>fmap</code> part, but still wasn&rsquo;t sure how using <code>join</code> would get the correct type result. So I looked it up on Hoogle, and I found out that <code>join</code> removes a level of monadic structure! And that was exactly what I had been looking for earlier today!</p>
 
-<h4 id="toc_3">Back to the Main Thread</h4>
+<h4 id="back-to-the-main-thread:f11822f10c61c2e55403485b223b3ea7">Back to the Main Thread</h4>
 
 <p>So, the problem of getting rid of the nesting was solved with join!</p>
 
@@ -135,7 +135,7 @@ putStrLn h --This line doesn't actually work but I'll explain later
 
 <p>Normal <code>map</code> won&rsquo;t work to print. I guess I&rsquo;m not completely clear why, but I think that using <code>map</code> doesn&rsquo;t actually evaluate the monad (in this case <code>putStrLn</code>). <code>mapM</code> maps and also evaluates and also returns a result. <code>mapM_</code> is more appropriate for this case of just printing, where return value is not needed, since it maps and evaluates but doesn&rsquo;t return.</p>
 
-<h4 id="toc_4">Final Code</h4>
+<h4 id="final-code:f11822f10c61c2e55403485b223b3ea7">Final Code</h4>
 
 <p>So a long-winded and long-winding road to get to the final code:</p>
 
@@ -146,7 +146,7 @@ putStrLn h --This line doesn't actually work but I'll explain later
 
 <p>I think that after this little excursion, and my attempt to write it up, I&rsquo;ll be able to read a lot more example code! And this was much more fun to me than trying to work through a monster assignment on functors and monads. Start small!</p>
 
-<h4 id="toc_5">Last lessons</h4>
+<h4 id="last-lessons:f11822f10c61c2e55403485b223b3ea7">Last lessons</h4>
 
 <pre><code>getCurrentDirectory &gt;&gt;= getDirectoryContents &gt;&gt;= mapM_ putStrln
 </code></pre>

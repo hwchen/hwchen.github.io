@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Rust on walther chen </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://waltherchen.com/tags/rust/index.xml/</link>
+    <title>Rust on walther chen</title>
+    <link>http://waltherchen.com/tags/rust/</link>
+    <description>Recent content in Rust on walther chen</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Walther Chen</author>
-    
-    <updated>Sat, 25 Oct 2014 13:35:22 EDT</updated>
+    <lastBuildDate>Sat, 25 Oct 2014 13:35:22 -0400</lastBuildDate>
+    <atom:link href="http://waltherchen.com/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Investigation, Haskell and Rust and Job Search</title>
       <link>http://waltherchen.com/post/investigation/</link>
-      <pubDate>Sat, 25 Oct 2014 13:35:22 EDT</pubDate>
-      <author>Walther Chen</author>
+      <pubDate>Sat, 25 Oct 2014 13:35:22 -0400</pubDate>
+      
       <guid>http://waltherchen.com/post/investigation/</guid>
       <description>
 
@@ -23,7 +23,7 @@ two things stopped me: one, that I didn&amp;rsquo;t have a pressing need that I 
 a project, and two, that my brain was telling me it wanted to explore more what
 programming could mean. The result was a foray into Haskell.&lt;/p&gt;
 
-&lt;h4 id=&#34;toc_0&#34;&gt;Haskell&lt;/h4&gt;
+&lt;h4 id=&#34;haskell:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Haskell&lt;/h4&gt;
 
 &lt;p&gt;Haskell is described as a lazy, functional language that has a very strong notion of
 purity. Great explanations of the language can be found at haskell.org.&lt;/p&gt;
@@ -55,7 +55,7 @@ much about the shape of a program up-front without delving into &amp;ldquo;detai
 of purity. In Haskell, this often has to do with I/O. I haven&amp;rsquo;t gotten to really grapple
 with this part yet, but I&amp;rsquo;m looking forward to it as I continue to learn.&lt;/p&gt;
 
-&lt;h4 id=&#34;toc_1&#34;&gt;Rust&lt;/h4&gt;
+&lt;h4 id=&#34;rust:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Rust&lt;/h4&gt;
 
 &lt;p&gt;Another language I looked at recently was Rust, which is a new language often compared to
 Golang. I&amp;rsquo;m glad I branched out to Haskell, because I learned some things I really
@@ -77,7 +77,7 @@ close-to-the-metal stuff hurts my head a bit, and was definitely one of the reas
 found programming hard in high school and college. (glad I was reintroduced through
 Python!). But I&amp;rsquo;m glad to know what&amp;rsquo;s possible in a programming language.&lt;/p&gt;
 
-&lt;h4 id=&#34;toc_2&#34;&gt;Investigations&lt;/h4&gt;
+&lt;h4 id=&#34;investigations:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Investigations&lt;/h4&gt;
 
 &lt;p&gt;I want to keep investigating both Rust and Haskell. I guess it&amp;rsquo;ll be a little bit of
 juggling as I also want to learn Python. But it does seem to me that picking up a bit of
@@ -98,7 +98,7 @@ ratings, some graphing for a nonlinear dynamics class, and hopefully some fun sm
 in Haskell. I won&amp;rsquo;t try to go too big; I know that I need to build lots of small projects
 first.&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_3&#34;&gt;Job Search&lt;/h3&gt;
+&lt;h3 id=&#34;job-search:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Job Search&lt;/h3&gt;
 
 &lt;p&gt;So does any of this have to do with a job search? After all, I&amp;rsquo;m not building my skills
 in a pattern that necessarily makes it obvious to future employers that I&amp;rsquo;m getting

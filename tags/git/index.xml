@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Git on walther chen </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://waltherchen.com/tags/git/index.xml/</link>
+    <title>Git on walther chen</title>
+    <link>http://waltherchen.com/tags/git/</link>
+    <description>Recent content in Git on walther chen</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Walther Chen</author>
-    
-    <updated>Sun, 04 Jan 2015 18:31:24 EST</updated>
+    <lastBuildDate>Sun, 04 Jan 2015 18:31:24 -0500</lastBuildDate>
+    <atom:link href="http://waltherchen.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Github and Ladder</title>
       <link>http://waltherchen.com/post/github_ladder/</link>
-      <pubDate>Sun, 04 Jan 2015 18:31:24 EST</pubDate>
-      <author>Walther Chen</author>
+      <pubDate>Sun, 04 Jan 2015 18:31:24 -0500</pubDate>
+      
       <guid>http://waltherchen.com/post/github_ladder/</guid>
       <description>&lt;p&gt;Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.&lt;/p&gt;
 
