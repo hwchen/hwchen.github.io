@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on walther chen</title>
-    <link>http://waltherchen.com/tags/development/</link>
-    <description>Recent content in Development on walther chen</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Development on walther chen </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://blog.hwc.io/tags/development/index.xml/</link>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Dec 2015 12:32:33 -0500</lastBuildDate>
-    <atom:link href="http://waltherchen.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <author>Walther Chen</author>
+    
+    <updated>Sun, 17 Jan 2016 19:01:06 EST</updated>
+    
+    <item>
+      <title>small projects</title>
+      <link>http://blog.hwc.io/post/keyring/</link>
+      <pubDate>Sun, 17 Jan 2016 19:01:06 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/keyring/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve really been enjoying doing some small, useful projects.&lt;/p&gt;
+
+&lt;p&gt;I really like figuring out good interfaces for libraries. How others will use my work to build things. So I like tools.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Learning and Rust</title>
-      <link>http://waltherchen.com/post/learning_and_rust/</link>
-      <pubDate>Tue, 29 Dec 2015 12:32:33 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/learning_and_rust/</guid>
+      <link>http://blog.hwc.io/post/learning_and_rust/</link>
+      <pubDate>Tue, 29 Dec 2015 12:32:33 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/learning_and_rust/</guid>
       <description>
 
 &lt;p&gt;Rambling thoughts ahead:&lt;/p&gt;
@@ -27,7 +39,7 @@
 
 &lt;p&gt;Anyways, Haskell provides solutions to all of the above in spades, but something about how it handles state in larger programs was hard for me to wrap my head around. I think that the choice of threading config/state through a large program or using a monad transformer (which I could only barely understand) were the last straws. So great for Euler Project, but hard for me personally to do other things.&lt;/p&gt;
 
-&lt;h2 id=&#34;rust:04cfde395ab3764661f29f5dbddcb2dc&#34;&gt;Rust&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Rust&lt;/h2&gt;
 
 &lt;p&gt;Rust seems to be more accessible for my brain, while also providing many of the guarantees that I enjoyed from Haskell. Plus it has a community geared towards beginners and has great tooling for development.&lt;/p&gt;
 
@@ -37,7 +49,7 @@
 
 &lt;p&gt;I still love Haskell, though, and hope that there will be a time I&amp;rsquo;ll get back to it in the future when I&amp;rsquo;m more experienced.&lt;/p&gt;
 
-&lt;h2 id=&#34;learning-rust:04cfde395ab3764661f29f5dbddcb2dc&#34;&gt;Learning, Rust&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Learning, Rust&lt;/h2&gt;
 
 &lt;p&gt;So, learning Rust for real this time. Which has also corresponded with leveling up in programming in general.&lt;/p&gt;
 
@@ -71,13 +83,13 @@
     
     <item>
       <title>A New Job</title>
-      <link>http://waltherchen.com/post/newjob/</link>
-      <pubDate>Sun, 12 Apr 2015 15:36:44 -0400</pubDate>
-      
-      <guid>http://waltherchen.com/post/newjob/</guid>
+      <link>http://blog.hwc.io/post/newjob/</link>
+      <pubDate>Sun, 12 Apr 2015 15:36:44 EDT</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/newjob/</guid>
       <description>
 
-&lt;h2 id=&#34;i-got-a-new-job:b629a5b524f8c3f32b9351f882b53361&#34;&gt;I got a new job!&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;I got a new job!&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;m very excited to be working as a software developer! I also found a great place to land. Good energy, good people, get things done, and very encouraging towards my development as a programmer.&lt;/p&gt;
 
@@ -97,10 +109,10 @@
     
     <item>
       <title>Github and Ladder</title>
-      <link>http://waltherchen.com/post/github_ladder/</link>
-      <pubDate>Sun, 04 Jan 2015 18:31:24 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/github_ladder/</guid>
+      <link>http://blog.hwc.io/post/github_ladder/</link>
+      <pubDate>Sun, 04 Jan 2015 18:31:24 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/github_ladder/</guid>
       <description>&lt;p&gt;Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.&lt;/p&gt;
 
 &lt;p&gt;For the MGA ladder, we&amp;rsquo;re going to set up some software to help manage recording and displaying of results. Hopefully, we&amp;rsquo;ll also get automatic submission of rated games to the AGA.&lt;/p&gt;
@@ -128,10 +140,10 @@
     
     <item>
       <title>Turning a corner</title>
-      <link>http://waltherchen.com/post/turning_corner/</link>
-      <pubDate>Thu, 25 Dec 2014 18:51:17 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/turning_corner/</guid>
+      <link>http://blog.hwc.io/post/turning_corner/</link>
+      <pubDate>Thu, 25 Dec 2014 18:51:17 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/turning_corner/</guid>
       <description>&lt;p&gt;Feels like I&amp;rsquo;m turning a corner! I think that I&amp;rsquo;m starting to feel the possibility of putting projects together now.&lt;/p&gt;
 
 &lt;p&gt;I think a large part of this is simply volume of code. I finished 50 problems on Project Euler (Yay!), which involved a lot of good repetition. I especially became comfortable with the use of higher-order functions. And from the repetition, I&amp;rsquo;m beginning to see how I would want to organize bigger programs. As usual, not something that I can really understand by reading a book, but it grows organically out of the process of learning. I&amp;rsquo;m beginning to see my own preferences for how to break up functions, when to use algebraic data types.&lt;/p&gt;
@@ -144,10 +156,10 @@
     
     <item>
       <title>Monads, Functors, and the Contents of the Current Directory</title>
-      <link>http://waltherchen.com/post/monad_utility/</link>
-      <pubDate>Tue, 16 Dec 2014 00:44:44 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/monad_utility/</guid>
+      <link>http://blog.hwc.io/post/monad_utility/</link>
+      <pubDate>Tue, 16 Dec 2014 00:44:44 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/monad_utility/</guid>
       <description>
 
 &lt;p&gt;While trying to get the contents of the current directory in a small Haskell script, I inadvertantly put together some cool connections about Monads and Functors. (disclaimer: this is not a Monad tutorial. Also, beware of ugly code and circuitous reasoning).&lt;/p&gt;
@@ -167,7 +179,7 @@ putStrLn h
 
 &lt;p&gt;The &amp;gt;&amp;gt;= operator may look a little strange. As I was just learning more about Monads, I was excited to try this syntax, it basically binds the result on the left directly to the right side, so the right side can be applied to it. This means that the intermediate step of binding to &lt;code&gt;h&lt;/code&gt; in the above example is skipped.&lt;/p&gt;
 
-&lt;h4 id=&#34;troubleshooting-and-types:f11822f10c61c2e55403485b223b3ea7&#34;&gt;Troubleshooting and Types&lt;/h4&gt;
+&lt;h4 id=&#34;toc_0&#34;&gt;Troubleshooting and Types&lt;/h4&gt;
 
 &lt;p&gt;Ok, now that the preliminary is out of the way, why didn&amp;rsquo;t my function work? Let&amp;rsquo;s look at the types.&lt;/p&gt;
 
@@ -186,7 +198,7 @@ putStrLn :: String -&amp;gt; IO ()
 
 &lt;p&gt;(Edit &lt;sup&gt;12&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;/2014: bind is &lt;code&gt;(&amp;gt;&amp;gt;=) :: Monad m =&amp;gt; m a -&amp;gt; (a -&amp;gt; m b) -&amp;gt; m b&lt;/code&gt;, so the function it takes should take a value but return a Monad (or IO) value. I&amp;rsquo;ve seen &lt;code&gt;&amp;lt;-&lt;/code&gt; described as &amp;ldquo;slurping&amp;rdquo; or &amp;ldquo;draw from&amp;rdquo;)&lt;/p&gt;
 
-&lt;h4 id=&#34;piecing-things-together:f11822f10c61c2e55403485b223b3ea7&#34;&gt;Piecing things together&lt;/h4&gt;
+&lt;h4 id=&#34;toc_1&#34;&gt;Piecing things together&lt;/h4&gt;
 
 &lt;p&gt;Ok, now knowing the basic structure of how things fit together, I needed to actually put it together.&lt;/p&gt;
 
@@ -204,7 +216,7 @@ h &amp;lt;- h&#39;
 putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;diversion-into-functors-it-all-comes-back:f11822f10c61c2e55403485b223b3ea7&#34;&gt;Diversion into functors (it all comes back)&lt;/h4&gt;
+&lt;h4 id=&#34;toc_2&#34;&gt;Diversion into functors (it all comes back)&lt;/h4&gt;
 
 &lt;p&gt;So, as part of this long rambling story, I happened to be reading about functors tonight and decided to explore using fmap to do some simple CLI string manipulation, like so:&lt;/p&gt;
 
@@ -216,7 +228,7 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 
 &lt;p&gt;By looking at types, I figured out the &lt;code&gt;fmap&lt;/code&gt; part, but still wasn&amp;rsquo;t sure how using &lt;code&gt;join&lt;/code&gt; would get the correct type result. So I looked it up on Hoogle, and I found out that &lt;code&gt;join&lt;/code&gt; removes a level of monadic structure! And that was exactly what I had been looking for earlier today!&lt;/p&gt;
 
-&lt;h4 id=&#34;back-to-the-main-thread:f11822f10c61c2e55403485b223b3ea7&#34;&gt;Back to the Main Thread&lt;/h4&gt;
+&lt;h4 id=&#34;toc_3&#34;&gt;Back to the Main Thread&lt;/h4&gt;
 
 &lt;p&gt;So, the problem of getting rid of the nesting was solved with join!&lt;/p&gt;
 
@@ -227,7 +239,7 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 
 &lt;p&gt;Normal &lt;code&gt;map&lt;/code&gt; won&amp;rsquo;t work to print. I guess I&amp;rsquo;m not completely clear why, but I think that using &lt;code&gt;map&lt;/code&gt; doesn&amp;rsquo;t actually evaluate the monad (in this case &lt;code&gt;putStrLn&lt;/code&gt;). &lt;code&gt;mapM&lt;/code&gt; maps and also evaluates and also returns a result. &lt;code&gt;mapM_&lt;/code&gt; is more appropriate for this case of just printing, where return value is not needed, since it maps and evaluates but doesn&amp;rsquo;t return.&lt;/p&gt;
 
-&lt;h4 id=&#34;final-code:f11822f10c61c2e55403485b223b3ea7&#34;&gt;Final Code&lt;/h4&gt;
+&lt;h4 id=&#34;toc_4&#34;&gt;Final Code&lt;/h4&gt;
 
 &lt;p&gt;So a long-winded and long-winding road to get to the final code:&lt;/p&gt;
 
@@ -238,7 +250,7 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 
 &lt;p&gt;I think that after this little excursion, and my attempt to write it up, I&amp;rsquo;ll be able to read a lot more example code! And this was much more fun to me than trying to work through a monster assignment on functors and monads. Start small!&lt;/p&gt;
 
-&lt;h4 id=&#34;last-lessons:f11822f10c61c2e55403485b223b3ea7&#34;&gt;Last lessons&lt;/h4&gt;
+&lt;h4 id=&#34;toc_5&#34;&gt;Last lessons&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;getCurrentDirectory &amp;gt;&amp;gt;= getDirectoryContents &amp;gt;&amp;gt;= mapM_ putStrln
 &lt;/code&gt;&lt;/pre&gt;
@@ -253,10 +265,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>Utilities</title>
-      <link>http://waltherchen.com/post/utilities/</link>
-      <pubDate>Mon, 15 Dec 2014 22:32:18 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/utilities/</guid>
+      <link>http://blog.hwc.io/post/utilities/</link>
+      <pubDate>Mon, 15 Dec 2014 22:32:18 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/utilities/</guid>
       <description>&lt;p&gt;Exciting! I wrote my first program that&amp;rsquo;s for &amp;ldquo;real&amp;rdquo; work! It&amp;rsquo;s a small script to upload files to an ftp server that hosts the MGA ladder.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s kind of funny, it seems like such a simple program when I look at it now. But maybe one month ago, it might have felt very complicated in Haskell. I think that&amp;rsquo;s because it helped this time around to know more about monads and &amp;gt;== and liftM. The steps of the script are not hard, nor was calling the libraries (for ftp, directories, etc.). But understanding what Haskell was actually doing (I think that this would be called semantics?) finally happened.&lt;/p&gt;
@@ -271,10 +283,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>End of Fall</title>
-      <link>http://waltherchen.com/post/end_of_fall/</link>
-      <pubDate>Mon, 15 Dec 2014 11:27:49 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/end_of_fall/</guid>
+      <link>http://blog.hwc.io/post/end_of_fall/</link>
+      <pubDate>Mon, 15 Dec 2014 11:27:49 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/end_of_fall/</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s the end of the fall (and almost the end of the year) and I&amp;rsquo;m still looking. I&amp;rsquo;m actually fairly optimistic, though. I hope to have some nice projects up in time for the new year, I feel like I&amp;rsquo;ll have some good chances then.&lt;/p&gt;
@@ -285,7 +297,7 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
 
 &lt;p&gt;I tried to use books before, but they felt too &amp;ldquo;boring,&amp;rdquo; which I guess was my brain&amp;rsquo;s code that I couldn&amp;rsquo;t internalize the information in a useful way. I&amp;rsquo;ve read some stuff that said that writing code is most important for beginners (even if it&amp;rsquo;s not &amp;ldquo;good code&amp;rdquo;), and then reading more code is more important later. I think I was prematurely optimizing a bit, thinking about how to make my code &amp;ldquo;good&amp;rdquo; and thinking about clean code. Even in Haskell, I can do quite a bit without understanding all the higher level concepts.&lt;/p&gt;
 
-&lt;h3 id=&#34;social-learning:8a2015de6891fef757c401308e3442d2&#34;&gt;Social Learning&lt;/h3&gt;
+&lt;h3 id=&#34;toc_0&#34;&gt;Social Learning&lt;/h3&gt;
 
 &lt;p&gt;I&amp;rsquo;ve also started going through algorithms and data structure with a friend from the Go club. I think that it&amp;rsquo;s going to be super helpful. I forget if I mentioned it in a previous post, but I&amp;rsquo;m realizing that I&amp;rsquo;m a very social learner. While I do like to read, most of the integration comes from talking with others. And not just listening, it has to be interactive. I think that&amp;rsquo;s why it felt easy to learn Go and martial arts: lots of social feedback.&lt;/p&gt;
 
@@ -297,10 +309,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>Investigation, Haskell and Rust and Job Search</title>
-      <link>http://waltherchen.com/post/investigation/</link>
-      <pubDate>Sat, 25 Oct 2014 13:35:22 -0400</pubDate>
-      
-      <guid>http://waltherchen.com/post/investigation/</guid>
+      <link>http://blog.hwc.io/post/investigation/</link>
+      <pubDate>Sat, 25 Oct 2014 13:35:22 EDT</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/investigation/</guid>
       <description>
 
 &lt;p&gt;Since my last post, I&amp;rsquo;ve been doing a lot of investigating. I could have jumped even
@@ -309,7 +321,7 @@ two things stopped me: one, that I didn&amp;rsquo;t have a pressing need that I 
 a project, and two, that my brain was telling me it wanted to explore more what
 programming could mean. The result was a foray into Haskell.&lt;/p&gt;
 
-&lt;h4 id=&#34;haskell:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Haskell&lt;/h4&gt;
+&lt;h4 id=&#34;toc_0&#34;&gt;Haskell&lt;/h4&gt;
 
 &lt;p&gt;Haskell is described as a lazy, functional language that has a very strong notion of
 purity. Great explanations of the language can be found at haskell.org.&lt;/p&gt;
@@ -341,7 +353,7 @@ much about the shape of a program up-front without delving into &amp;ldquo;detai
 of purity. In Haskell, this often has to do with I/O. I haven&amp;rsquo;t gotten to really grapple
 with this part yet, but I&amp;rsquo;m looking forward to it as I continue to learn.&lt;/p&gt;
 
-&lt;h4 id=&#34;rust:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Rust&lt;/h4&gt;
+&lt;h4 id=&#34;toc_1&#34;&gt;Rust&lt;/h4&gt;
 
 &lt;p&gt;Another language I looked at recently was Rust, which is a new language often compared to
 Golang. I&amp;rsquo;m glad I branched out to Haskell, because I learned some things I really
@@ -363,7 +375,7 @@ close-to-the-metal stuff hurts my head a bit, and was definitely one of the reas
 found programming hard in high school and college. (glad I was reintroduced through
 Python!). But I&amp;rsquo;m glad to know what&amp;rsquo;s possible in a programming language.&lt;/p&gt;
 
-&lt;h4 id=&#34;investigations:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Investigations&lt;/h4&gt;
+&lt;h4 id=&#34;toc_2&#34;&gt;Investigations&lt;/h4&gt;
 
 &lt;p&gt;I want to keep investigating both Rust and Haskell. I guess it&amp;rsquo;ll be a little bit of
 juggling as I also want to learn Python. But it does seem to me that picking up a bit of
@@ -384,7 +396,7 @@ ratings, some graphing for a nonlinear dynamics class, and hopefully some fun sm
 in Haskell. I won&amp;rsquo;t try to go too big; I know that I need to build lots of small projects
 first.&lt;/p&gt;
 
-&lt;h3 id=&#34;job-search:3bad70dc8c7eeec06339907fd77d9b7e&#34;&gt;Job Search&lt;/h3&gt;
+&lt;h3 id=&#34;toc_3&#34;&gt;Job Search&lt;/h3&gt;
 
 &lt;p&gt;So does any of this have to do with a job search? After all, I&amp;rsquo;m not building my skills
 in a pattern that necessarily makes it obvious to future employers that I&amp;rsquo;m getting

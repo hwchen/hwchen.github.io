@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on walther chen</title>
-    <link>http://waltherchen.com/tags/git/</link>
-    <description>Recent content in Git on walther chen</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Git on walther chen </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://blog.hwc.io/tags/git/index.xml/</link>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Jan 2015 18:31:24 -0500</lastBuildDate>
-    <atom:link href="http://waltherchen.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <author>Walther Chen</author>
+    
+    <updated>Sun, 04 Jan 2015 18:31:24 EST</updated>
     
     <item>
       <title>Github and Ladder</title>
-      <link>http://waltherchen.com/post/github_ladder/</link>
-      <pubDate>Sun, 04 Jan 2015 18:31:24 -0500</pubDate>
-      
-      <guid>http://waltherchen.com/post/github_ladder/</guid>
+      <link>http://blog.hwc.io/post/github_ladder/</link>
+      <pubDate>Sun, 04 Jan 2015 18:31:24 EST</pubDate>
+      <author>Walther Chen</author>
+      <guid>http://blog.hwc.io/post/github_ladder/</guid>
       <description>&lt;p&gt;Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.&lt;/p&gt;
 
 &lt;p&gt;For the MGA ladder, we&amp;rsquo;re going to set up some software to help manage recording and displaying of results. Hopefully, we&amp;rsquo;ll also get automatic submission of rated games to the AGA.&lt;/p&gt;

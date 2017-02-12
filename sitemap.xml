@@ -2,58 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://waltherchen.com/</loc>
-    <lastmod>2015-12-29T12:32:33-05:00</lastmod>
+    <loc>http://blog.hwc.io/</loc>
+    <lastmod>2016-01-17T19:01:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/learning_and_rust/</loc>
+    <loc>http://blog.hwc.io/post/keyring/</loc>
+    <lastmod>2016-01-17T19:01:06-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.hwc.io/post/learning_and_rust/</loc>
     <lastmod>2015-12-29T12:32:33-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/newjob/</loc>
+    <loc>http://blog.hwc.io/post/newjob/</loc>
     <lastmod>2015-04-12T15:36:44-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/github_ladder/</loc>
+    <loc>http://blog.hwc.io/post/github_ladder/</loc>
     <lastmod>2015-01-04T18:31:24-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/turning_corner/</loc>
+    <loc>http://blog.hwc.io/post/turning_corner/</loc>
     <lastmod>2014-12-25T18:51:17-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/monad_utility/</loc>
+    <loc>http://blog.hwc.io/post/monad_utility/</loc>
     <lastmod>2014-12-16T00:44:44-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/utilities/</loc>
+    <loc>http://blog.hwc.io/post/utilities/</loc>
     <lastmod>2014-12-15T22:32:18-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/end_of_fall/</loc>
+    <loc>http://blog.hwc.io/post/end_of_fall/</loc>
     <lastmod>2014-12-15T11:27:49-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/investigation/</loc>
+    <loc>http://blog.hwc.io/post/investigation/</loc>
     <lastmod>2014-10-25T13:35:22-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/post/NewJourney/</loc>
+    <loc>http://blog.hwc.io/post/NewJourney/</loc>
     <lastmod>2014-09-02T14:04:09-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://waltherchen.com/about/</loc>
+    <loc>http://blog.hwc.io/about/</loc>
     <lastmod>2014-09-02T13:48:09-04:00</lastmod>
   </url>
   
