@@ -3,7 +3,7 @@
   <channel>
       <title>Development on walther chen </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://blog.hwc.io/tags/development/index.xml/</link>
+    <link>http://oldblog.hwc.io/tags/development/index.xml/</link>
     <language>en-us</language>
     <author>Walther Chen</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>small projects</title>
-      <link>http://blog.hwc.io/post/keyring/</link>
+      <link>http://oldblog.hwc.io/post/keyring/</link>
       <pubDate>Sun, 17 Jan 2016 19:01:06 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/keyring/</guid>
+      <guid>http://oldblog.hwc.io/post/keyring/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve really been enjoying doing some small, useful projects.&lt;/p&gt;
 
 &lt;p&gt;I really like figuring out good interfaces for libraries. How others will use my work to build things. So I like tools.&lt;/p&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>Learning and Rust</title>
-      <link>http://blog.hwc.io/post/learning_and_rust/</link>
+      <link>http://oldblog.hwc.io/post/learning_and_rust/</link>
       <pubDate>Tue, 29 Dec 2015 12:32:33 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/learning_and_rust/</guid>
+      <guid>http://oldblog.hwc.io/post/learning_and_rust/</guid>
       <description>
 
 &lt;p&gt;Rambling thoughts ahead:&lt;/p&gt;
@@ -83,10 +83,10 @@
     
     <item>
       <title>A New Job</title>
-      <link>http://blog.hwc.io/post/newjob/</link>
+      <link>http://oldblog.hwc.io/post/newjob/</link>
       <pubDate>Sun, 12 Apr 2015 15:36:44 EDT</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/newjob/</guid>
+      <guid>http://oldblog.hwc.io/post/newjob/</guid>
       <description>
 
 &lt;h2 id=&#34;toc_0&#34;&gt;I got a new job!&lt;/h2&gt;
@@ -109,10 +109,10 @@
     
     <item>
       <title>Github and Ladder</title>
-      <link>http://blog.hwc.io/post/github_ladder/</link>
+      <link>http://oldblog.hwc.io/post/github_ladder/</link>
       <pubDate>Sun, 04 Jan 2015 18:31:24 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/github_ladder/</guid>
+      <guid>http://oldblog.hwc.io/post/github_ladder/</guid>
       <description>&lt;p&gt;Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.&lt;/p&gt;
 
 &lt;p&gt;For the MGA ladder, we&amp;rsquo;re going to set up some software to help manage recording and displaying of results. Hopefully, we&amp;rsquo;ll also get automatic submission of rated games to the AGA.&lt;/p&gt;
@@ -140,10 +140,10 @@
     
     <item>
       <title>Turning a corner</title>
-      <link>http://blog.hwc.io/post/turning_corner/</link>
+      <link>http://oldblog.hwc.io/post/turning_corner/</link>
       <pubDate>Thu, 25 Dec 2014 18:51:17 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/turning_corner/</guid>
+      <guid>http://oldblog.hwc.io/post/turning_corner/</guid>
       <description>&lt;p&gt;Feels like I&amp;rsquo;m turning a corner! I think that I&amp;rsquo;m starting to feel the possibility of putting projects together now.&lt;/p&gt;
 
 &lt;p&gt;I think a large part of this is simply volume of code. I finished 50 problems on Project Euler (Yay!), which involved a lot of good repetition. I especially became comfortable with the use of higher-order functions. And from the repetition, I&amp;rsquo;m beginning to see how I would want to organize bigger programs. As usual, not something that I can really understand by reading a book, but it grows organically out of the process of learning. I&amp;rsquo;m beginning to see my own preferences for how to break up functions, when to use algebraic data types.&lt;/p&gt;
@@ -156,10 +156,10 @@
     
     <item>
       <title>Monads, Functors, and the Contents of the Current Directory</title>
-      <link>http://blog.hwc.io/post/monad_utility/</link>
+      <link>http://oldblog.hwc.io/post/monad_utility/</link>
       <pubDate>Tue, 16 Dec 2014 00:44:44 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/monad_utility/</guid>
+      <guid>http://oldblog.hwc.io/post/monad_utility/</guid>
       <description>
 
 &lt;p&gt;While trying to get the contents of the current directory in a small Haskell script, I inadvertantly put together some cool connections about Monads and Functors. (disclaimer: this is not a Monad tutorial. Also, beware of ugly code and circuitous reasoning).&lt;/p&gt;
@@ -265,10 +265,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>Utilities</title>
-      <link>http://blog.hwc.io/post/utilities/</link>
+      <link>http://oldblog.hwc.io/post/utilities/</link>
       <pubDate>Mon, 15 Dec 2014 22:32:18 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/utilities/</guid>
+      <guid>http://oldblog.hwc.io/post/utilities/</guid>
       <description>&lt;p&gt;Exciting! I wrote my first program that&amp;rsquo;s for &amp;ldquo;real&amp;rdquo; work! It&amp;rsquo;s a small script to upload files to an ftp server that hosts the MGA ladder.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s kind of funny, it seems like such a simple program when I look at it now. But maybe one month ago, it might have felt very complicated in Haskell. I think that&amp;rsquo;s because it helped this time around to know more about monads and &amp;gt;== and liftM. The steps of the script are not hard, nor was calling the libraries (for ftp, directories, etc.). But understanding what Haskell was actually doing (I think that this would be called semantics?) finally happened.&lt;/p&gt;
@@ -283,10 +283,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>End of Fall</title>
-      <link>http://blog.hwc.io/post/end_of_fall/</link>
+      <link>http://oldblog.hwc.io/post/end_of_fall/</link>
       <pubDate>Mon, 15 Dec 2014 11:27:49 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/end_of_fall/</guid>
+      <guid>http://oldblog.hwc.io/post/end_of_fall/</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s the end of the fall (and almost the end of the year) and I&amp;rsquo;m still looking. I&amp;rsquo;m actually fairly optimistic, though. I hope to have some nice projects up in time for the new year, I feel like I&amp;rsquo;ll have some good chances then.&lt;/p&gt;
@@ -309,10 +309,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>Investigation, Haskell and Rust and Job Search</title>
-      <link>http://blog.hwc.io/post/investigation/</link>
+      <link>http://oldblog.hwc.io/post/investigation/</link>
       <pubDate>Sat, 25 Oct 2014 13:35:22 EDT</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/investigation/</guid>
+      <guid>http://oldblog.hwc.io/post/investigation/</guid>
       <description>
 
 &lt;p&gt;Since my last post, I&amp;rsquo;ve been doing a lot of investigating. I could have jumped even

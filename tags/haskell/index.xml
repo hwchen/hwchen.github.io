@@ -3,7 +3,7 @@
   <channel>
       <title>Haskell on walther chen </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://blog.hwc.io/tags/haskell/index.xml/</link>
+    <link>http://oldblog.hwc.io/tags/haskell/index.xml/</link>
     <language>en-us</language>
     <author>Walther Chen</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Turning a corner</title>
-      <link>http://blog.hwc.io/post/turning_corner/</link>
+      <link>http://oldblog.hwc.io/post/turning_corner/</link>
       <pubDate>Thu, 25 Dec 2014 18:51:17 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/turning_corner/</guid>
+      <guid>http://oldblog.hwc.io/post/turning_corner/</guid>
       <description>&lt;p&gt;Feels like I&amp;rsquo;m turning a corner! I think that I&amp;rsquo;m starting to feel the possibility of putting projects together now.&lt;/p&gt;
 
 &lt;p&gt;I think a large part of this is simply volume of code. I finished 50 problems on Project Euler (Yay!), which involved a lot of good repetition. I especially became comfortable with the use of higher-order functions. And from the repetition, I&amp;rsquo;m beginning to see how I would want to organize bigger programs. As usual, not something that I can really understand by reading a book, but it grows organically out of the process of learning. I&amp;rsquo;m beginning to see my own preferences for how to break up functions, when to use algebraic data types.&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Monads, Functors, and the Contents of the Current Directory</title>
-      <link>http://blog.hwc.io/post/monad_utility/</link>
+      <link>http://oldblog.hwc.io/post/monad_utility/</link>
       <pubDate>Tue, 16 Dec 2014 00:44:44 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/monad_utility/</guid>
+      <guid>http://oldblog.hwc.io/post/monad_utility/</guid>
       <description>
 
 &lt;p&gt;While trying to get the contents of the current directory in a small Haskell script, I inadvertantly put together some cool connections about Monads and Functors. (disclaimer: this is not a Monad tutorial. Also, beware of ugly code and circuitous reasoning).&lt;/p&gt;
@@ -136,10 +136,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>Utilities</title>
-      <link>http://blog.hwc.io/post/utilities/</link>
+      <link>http://oldblog.hwc.io/post/utilities/</link>
       <pubDate>Mon, 15 Dec 2014 22:32:18 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/utilities/</guid>
+      <guid>http://oldblog.hwc.io/post/utilities/</guid>
       <description>&lt;p&gt;Exciting! I wrote my first program that&amp;rsquo;s for &amp;ldquo;real&amp;rdquo; work! It&amp;rsquo;s a small script to upload files to an ftp server that hosts the MGA ladder.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s kind of funny, it seems like such a simple program when I look at it now. But maybe one month ago, it might have felt very complicated in Haskell. I think that&amp;rsquo;s because it helped this time around to know more about monads and &amp;gt;== and liftM. The steps of the script are not hard, nor was calling the libraries (for ftp, directories, etc.). But understanding what Haskell was actually doing (I think that this would be called semantics?) finally happened.&lt;/p&gt;
@@ -154,10 +154,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>End of Fall</title>
-      <link>http://blog.hwc.io/post/end_of_fall/</link>
+      <link>http://oldblog.hwc.io/post/end_of_fall/</link>
       <pubDate>Mon, 15 Dec 2014 11:27:49 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/end_of_fall/</guid>
+      <guid>http://oldblog.hwc.io/post/end_of_fall/</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s the end of the fall (and almost the end of the year) and I&amp;rsquo;m still looking. I&amp;rsquo;m actually fairly optimistic, though. I hope to have some nice projects up in time for the new year, I feel like I&amp;rsquo;ll have some good chances then.&lt;/p&gt;
@@ -180,10 +180,10 @@ putStrLn h --This line doesn&#39;t actually work but I&#39;ll explain later
     
     <item>
       <title>Investigation, Haskell and Rust and Job Search</title>
-      <link>http://blog.hwc.io/post/investigation/</link>
+      <link>http://oldblog.hwc.io/post/investigation/</link>
       <pubDate>Sat, 25 Oct 2014 13:35:22 EDT</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/investigation/</guid>
+      <guid>http://oldblog.hwc.io/post/investigation/</guid>
       <description>
 
 &lt;p&gt;Since my last post, I&amp;rsquo;ve been doing a lot of investigating. I could have jumped even

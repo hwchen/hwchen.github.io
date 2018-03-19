@@ -3,7 +3,7 @@
   <channel>
       <title>Github on walther chen </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://blog.hwc.io/tags/github/index.xml/</link>
+    <link>http://oldblog.hwc.io/tags/github/index.xml/</link>
     <language>en-us</language>
     <author>Walther Chen</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Github and Ladder</title>
-      <link>http://blog.hwc.io/post/github_ladder/</link>
+      <link>http://oldblog.hwc.io/post/github_ladder/</link>
       <pubDate>Sun, 04 Jan 2015 18:31:24 EST</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/github_ladder/</guid>
+      <guid>http://oldblog.hwc.io/post/github_ladder/</guid>
       <description>&lt;p&gt;Today, my friend Andrew was kind enough to take me through some of the basics of Git and Github.&lt;/p&gt;
 
 &lt;p&gt;For the MGA ladder, we&amp;rsquo;re going to set up some software to help manage recording and displaying of results. Hopefully, we&amp;rsquo;ll also get automatic submission of rated games to the AGA.&lt;/p&gt;

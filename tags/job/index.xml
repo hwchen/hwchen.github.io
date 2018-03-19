@@ -3,7 +3,7 @@
   <channel>
       <title>Job on walther chen </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://blog.hwc.io/tags/job/index.xml/</link>
+    <link>http://oldblog.hwc.io/tags/job/index.xml/</link>
     <language>en-us</language>
     <author>Walther Chen</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>A New Job</title>
-      <link>http://blog.hwc.io/post/newjob/</link>
+      <link>http://oldblog.hwc.io/post/newjob/</link>
       <pubDate>Sun, 12 Apr 2015 15:36:44 EDT</pubDate>
       <author>Walther Chen</author>
-      <guid>http://blog.hwc.io/post/newjob/</guid>
+      <guid>http://oldblog.hwc.io/post/newjob/</guid>
       <description>
 
 &lt;h2 id=&#34;toc_0&#34;&gt;I got a new job!&lt;/h2&gt;
